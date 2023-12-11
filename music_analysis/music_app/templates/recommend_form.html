@@ -1,0 +1,131 @@
+<!-- music_analysis/templates/music_analysis/newpage.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <script src="{% static 'script.js' %}" defer></script>
+    <title>Choose</title>
+</head>
+<body>
+    <header>
+        <h1>Choose</h1>
+    </header>
+
+    <section id="dropdowns-content">
+        <h2>Choose Your Options</h2>
+        <form method="post" action="{% url 'recommend_songs' %}">
+            {% csrf_token %}
+            <label for="dropdown1">GENRE:</label>
+            <label for="dropdown1">GENRE:</label>
+            <select id="dropdown1">
+                <option value="filmi">Filmi</option>
+                <option value="indian_instrumental">Indian Instrumental</option>
+                <option value="modern_bollywood">Modern Bollywood</option>
+                <option value="desi_pop">Desi Pop</option>
+                <option value="classic_pakistani_pop">Classic Pakistani Pop</option>
+                <option value="pakistani_pop">Pakistani Pop</option>
+                <option value="qawwali">Qawwali</option>
+                <option value="sufi">Sufi</option>
+                <option value="indian_folk">Indian Folk</option>
+                <option value="alt_z">Alt Z</option>
+                <option value="electropop">Electropop</option>
+                <option value="pop">Pop</option>
+                <option value="post_teen_pop">Post-Teen Pop</option>
+                <option value="talent_show">Talent Show</option>
+                <option value="latin_pop">Latin Pop</option>
+                <option value="puerto_rican_pop">Puerto Rican Pop</option>
+                <option value="latin_hip_hop">Latin Hip Hop</option>
+                <option value="reggaeton">Reggaeton</option>
+                <option value="trap_latino">Trap Latino</option>
+                <option value="urbano_latino">Urbano Latino</option>
+                <option value="canadian_pop">Canadian Pop</option>
+                <option value="boy_band">Boy Band</option>
+                <option value="desi_hip_hop">Desi Hip Hop</option>
+                <option value="desi_trap">Desi Trap</option>
+                <option value="hare_krishna">Hare Krishna</option>
+                <option value="punjabi_pop">Punjabi Pop</option>
+                <option value="gujarati_pop">Gujarati Pop</option>
+                <option value="pop_edm">Pop EDM</option>
+                <option value="social_media_pop">Social Media Pop</option>
+                <option value="tollywood">Tollywood</option>
+                <option value="melanesian_pop">Melanesian Pop</option>
+                <option value="pacific_islands_pop">Pacific Islands Pop</option>
+                <option value="png_pop">PNG Pop</option>
+                <option value="reggae_do_maranhao">Reggae do Maranhao</option>
+                <option value="solomon_islands_pop">Solomon Islands Pop</option>
+                <option value="hindi_indie">Hindi Indie</option>
+                <option value="colombian_pop">Colombian Pop</option>
+                <option value="latin_viral_pop">Latin Viral Pop</option>
+                <option value="reggaeton_colombiano">Reggaeton Colombiano</option>
+                <option value="reggae_fusion">Reggae Fusion</option>
+                <option value="reggae_rock">Reggae Rock</option>
+                <option value="album_rock">Album Rock</option>
+                <option value="classic_rock">Classic Rock</option>
+                <option value="heartland_rock">Heartland Rock</option>
+                <option value="mellow_gold">Mellow Gold</option>
+                <option value="rock">Rock</option>
+                <option value="soft_rock">Soft Rock</option>
+                <option value="yacht_rock">Yacht Rock</option>
+                <option value="afro_r&b">Afro R&B</option>
+                <option value="afrobeats">Afrobeats</option>
+                <option value="post_teen_pop">Post-Teen Pop</option>
+                <option value="canadian_hip_hop">Canadian Hip Hop</option>
+                <option value="hip_hop">Hip Hop</option>
+                <option value="pop_rap">Pop Rap</option>
+                <option value="rap">Rap</option>
+                <option value="chicago_drill">Chicago Drill</option>
+                <option value="chicago_rap">Chicago Rap</option>
+                <option value="drill">Drill</option>
+                <option value="trap">Trap</option>
+                <option value="r&b">R&B</option>
+                <option value="punjabi_pop">Punjabi Pop</option>
+                <option value="punjabi_pop">Punjabi Pop</option>
+                <option value="tamil_pop">Tamil Pop</option>
+                <option value="classic_bollywood">Classic Bollywood</option>
+                <option value="rajasthani">Rajasthani</option>
+            </select>
+
+            <label for="dropdown2">DURATION OF SONG:</label>
+            <select name="duration_in_min" id="dropdown2">
+                <!-- Add options for dropdown 2 as needed -->
+                <option value="3">Short</option>
+                <option value="4">Medium</option>
+                <option value="5">Long</option>
+                <!-- ... -->
+            </select>
+
+            <label for="dropdown3">RELEASE YEAR:</label>
+            <select name="release_year" id="dropdown3">
+                <!-- Add options for dropdown 3 manually -->
+                <option value="2010">2010</option>
+                <option value="2011">2011</option>
+                <option value="2012">2012</option>
+                <option value="2013">2013</option>
+                <option value="2014">2014</option>
+                <option value="2015">2015</option>
+                <option value="2016">2016</option>
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+            </select>
+
+            <!-- Add the "Recommend" button -->
+            <button type="submit" class="cta-button">Recommend</button>
+        </form>
+        <a href="#" class="cta-button" id="goBackFromNewPageBtn">Go Back</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 New Page. All rights reserved.</p>
+    </footer>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

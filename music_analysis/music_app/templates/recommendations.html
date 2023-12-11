@@ -1,0 +1,18 @@
+<!-- music_analysis/templates/recommendations.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommended Songs</title>
+</head>
+<body>
+    <h1>Top 10 Recommended Songs</h1>
+    <ul>
+        {% for song in songs %}
+            <li>{{ song.track_name }} by {{ song.artist_names }} ({{ song.popularity }}/100)</li>
+        {% endfor %}
+    </ul>
+
+    <!-- Display the popularity chart -->
+    <img src="{{ chart_path }}" alt="Popularity Chart">
+</body>
+</html>
